@@ -79,6 +79,7 @@ header:hover {
 
 /* footer */
 footer {
+  position: relative;
   width: 100%;
   height: 70px;
   background-color: rgb(229, 240, 242);
@@ -86,11 +87,88 @@ footer {
   bottom: 0;
 }
 address {
+  text-align: center;
+  width: 1200px;
+  /* margin: 0 auto; */
+  font-size: 14px;
+  font-style: inherit;
+  color: rgb(70, 70, 70);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 14px;
-  font-style: inherit;
-  color: rgb(70, 70, 70);
+}
+
+/* 반응형 태블릿 */
+@media screen and (max-width: 768px) {
+  .header_wrap {
+    width: 768px;
+  }
+  .header_wrap ul img {
+    width: 128px;
+    position: relative;
+    top: -25px;
+    left: 10px;
+  }
+  .header_wrap ul li {
+    width: 100px;
+    margin-left: 5px;
+  }
+  .header_wrap ul li::after {
+    margin-left: 45px;
+  }
+  .margin-l {
+    margin-left: 40px;
+  }
+  footer {
+    width: 768px;
+  }
+  address {
+    width: 100%;
+    /* margin: 0 auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* 반응형 휴대폰 (갤럭시 노트 20U 기준) */
+@media screen and (max-width: 412px) {
+  header {
+    height: 150px;
+  }
+  .header_wrap {
+    width: 412px;
+  }
+  .header_wrap ul img {
+    position: absolute;
+    margin: 44px 0 0 127px;
+  }
+  .header_wrap ul li {
+    width: 30px;
+    font-size: 12px;
+    margin-top: 60px;
+  }
+  .header_wrap ul li:hover {
+    font-size: 14px;
+  }
+  .header_wrap ul li::after {
+    margin-left: 52px;
+    margin-top: 20px;
+  }
+  .margin-l {
+    margin-left: 50px;
+  }
+  footer {
+    width: 412px;
+  }
+  address {
+    font-size: 10px;
+    width: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
