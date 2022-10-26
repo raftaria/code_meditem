@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  font: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
+}
+
+.sand {
+  width: 1200px;
+  margin: 0 auto;
+}
+.bar {
+  width: 3px;
+  height: 100px;
+  background-color: black;
+  margin: 0 auto;  
+}
+
+section {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  /* background-color: aqua; */
+}
