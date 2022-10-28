@@ -1,0 +1,52 @@
+section {
+  width: 100%;
+  margin: 0 auto;
+}
+section .main_img_wrap {
+  position: relative;
+  width: 100%;
+  height: 907px;
+  background-color: #000;
+}
+section .main_img {
+  background: url(../img/img_kira.jpg) no-repeat 0 0;
+  background-size: 1451.2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1451.2px;
+  height: 100%;
+}
+
+/* 반응형 태블릿 */
+@media screen and (max-width: 768px) {
+  section {
+    width: 100%;
+    margin: 0 auto;
+  }
+  section .main_img_wrap {
+    height: 480px;
+  }
+  section .main_img {
+    background-size: 650px;
+    width: 650px;
+    height: 100%;
+  }
+}
+
+/* 반응형 스마트폰 */
+@media screen and (max-width: 412px) {
+  section {
+    width: 100%;
+    margin: 0 auto;
+  }
+  section .main_img_warp {
+    height: 257.5px;
+  }
+  section .main_img {
+    background-size: 412px;
+    width: 412px;
+    height: 100%;
+  }
+}
