@@ -1,0 +1,87 @@
+section {
+  width: 100%;
+}
+section .history_wrap {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 800px;
+  /* background-color: #B365AE; */
+}
+section .history_tit {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  font-size: 30px;
+  font-weight: bold;
+}
+section .history_des {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+}
+section .history_table {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+table {
+  width: 850px;
+  border-collapse: collapse;
+}
+th, td {
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+th {
+  height: 50px;
+}
+td {
+  height: 50px;
+  text-align: center;
+}
+/* tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+table .number {
+  width: 50px;
+}
+table .busi_name {
+  width: 300px;
+}
+table .delegate {
+  width: 200px;
+}
+table .test_date {
+  width: 200px;
+}
+table .test_result {
+  width: 150px;
+}
+
+footer {
+  position: relative;
+  transform: translateY(-100%);
+}
+
+@media screen and (max-width: 768px) {
+  section .history_wrap {
+    width: 768px;
+  }
+  section .history_tit {
+    top: 50px;
+    left: 150px;
+  }
+  section .history_des {
+    top: 125px;
+  }
+  section .history_table {
+    top: 280px;
+  }
+  table {
+    width: 600px;
+  }
+}
