@@ -23,6 +23,25 @@ section .history_des {
   transform: translateX(-50%);
   font-size: 18px;
 }
+section .history_sch {
+  position: absolute;
+  top: 32%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+section .sch_txt {
+  width: 150px;
+  height: 20px;
+  text-align: center;
+}
+section .sch_btn {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4.5px;
+  background-color: #ddd;
+}
 section .history_table {
   position: absolute;
   top: 300px;
@@ -31,6 +50,7 @@ section .history_table {
 }
 table {
   width: 850px;
+  table-layout: fixed;
   border-collapse: collapse;
 }
 th, td {
@@ -42,6 +62,9 @@ th {
 td {
   height: 50px;
   text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* tr:nth-child(even) {
   background-color: #f2f2f2;
@@ -62,11 +85,7 @@ table .test_result {
   width: 150px;
 }
 
-footer {
-  position: relative;
-  transform: translateY(-100%);
-}
-
+/* 반응형 테블릿 */
 @media screen and (max-width: 768px) {
   section .history_wrap {
     width: 768px;
@@ -78,10 +97,81 @@ footer {
   section .history_des {
     top: 125px;
   }
+  section .history_sch {
+    left: 66.5%;
+  }
+  section .sch_btn {
+    margin-left: 5px;
+  }
   section .history_table {
     top: 280px;
   }
   table {
-    width: 600px;
+    width: 500px;
+  }
+  table .number {
+    width: 50px;
+  }
+  table .busi_name {
+    width: 150px;
+  }
+  table .delegate {
+    width: 110px;
+  }
+  table .test_date {
+    width: 110px;
+  }
+  table .test_result {
+    width: 80px;
+  }
+}
+
+/* 반응형 모바일 */
+@media screen and (max-width: 412px) {
+  section .history_wrap {
+    width: 412px;
+  }
+  section .history_tit {
+    margin-left: -10px;
+  }
+  section .history_des {
+    top: 125px;
+  }
+  section .history_sch {
+    width: 215px;
+    left: 68.5%;
+  }
+  section .sch_txt {
+
+  }
+  section .sch_btn {
+
+  }
+  section .history_table {
+    top: 280px;
+  }
+  table {
+    width: 380px;
+  }
+  th {
+    font-size: 14px;
+  }
+  td {
+    font-size: 12px;
+  }
+  table .number {
+    width: 50px;
+  }
+  table .busi_name {
+    width: 110px;
+  }
+  table .delegate {
+    width: 80px;
+  }
+  table .test_date {
+    width: 80px;
+  }
+  table .test_result {
+    width: 80px;
   }
 }
