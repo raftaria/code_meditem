@@ -1,6 +1,7 @@
 section {
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 section .main_wrap {
   position: relative;
@@ -38,6 +39,37 @@ section .text_1, .text_2, .text_3, .text_4 {
   color: #fff;
   font-size: 30px;
 }
+section .test_wrap {
+  position: absolute;
+  top: 907px;
+  width: 100%;
+  height: 500px;
+  box-sizing: border-box;
+  background-color: #000;
+}
+section .test_txt {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin-top: 275px;
+}
+section .test_btn {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 150px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  transition: background-color 0.5s, color 1s;
+}
+section .test_btn:hover {
+  background-color: #0052a3;
+  color: #fff;
+}
 
 /* 반응형 태블릿 */
 @media screen and (max-width: 768px) {
@@ -68,6 +100,22 @@ section .text_1, .text_2, .text_3, .text_4 {
   section .text_1, .text_2, .text_3, .text_4 {
     font-size: 20px;
   }
+  section .test_wrap {
+    top: 479px;
+    width: 100%;
+    height: 300px;
+  }
+  section .test_txt {
+    margin-top: 170px;
+  }
+  section .test_btn {
+    top: 35%;
+    left: 50%;
+    width: 250px;
+    height: 125px;
+    border-radius: 40px;
+    font-size: 27px;
+  }
 }
 
 /* 반응형 스마트폰 */
@@ -85,7 +133,6 @@ section .text_1, .text_2, .text_3, .text_4 {
     height: 100%;
   }
   section .main_text_1 {
-    position: absolute;
     top: 220px;
     left: 4%;
   }
@@ -98,5 +145,20 @@ section .text_1, .text_2, .text_3, .text_4 {
   }
   section .text_1, .text_2, .text_3, .text_4 {
     font-size: 16px;
+  }
+  section .test_wrap {
+    top: 400px;
+    width: 100%;
+    height: 300px;
+  }
+  section .test_txt{
+    margin-top: 200px;
+  }
+  section .test_btn {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 100px;
+    font-size: 23px;
   }
 }

@@ -18,15 +18,15 @@ section .history_tit {
 }
 section .history_des {
   position: absolute;
-  top: 150px;
+  top: 160px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 18px;
 }
 section .history_sch {
   position: absolute;
-  top: 32%;
-  left: 75%;
+  top: 36%;
+  left: 74.8%;
   transform: translate(-50%, -50%);
 }
 section .sch_txt {
@@ -44,7 +44,7 @@ section .sch_btn {
 }
 section .history_table {
   position: absolute;
-  top: 300px;
+  top: 330px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -106,6 +106,9 @@ table .test_result {
   section .history_table {
     top: 280px;
   }
+  section .history_sch {
+    top: 33%;
+  }
   table {
     width: 500px;
   }
@@ -136,6 +139,7 @@ table .test_result {
   }
   section .history_des {
     top: 125px;
+    width: 360px;
   }
   section .history_sch {
     width: 215px;
@@ -143,6 +147,9 @@ table .test_result {
   }
   section .history_table {
     top: 280px;
+  }
+  section .history_sch {
+    top: 33%;
   }
   table {
     width: 380px;
