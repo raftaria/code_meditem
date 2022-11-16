@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M E D I T E M id</title>
+  <link rel="stylesheet" href="../css/headerfooter.css">
+  <link rel="stylesheet" href="../css/id.css">
+</head>
+<body>
+  <header>
+    <div class="header_wrap">
+      <ul>
+        <a href="../main.html" class="tdn">
+          <img src="../img/MedITEM_logo.png" alt="MEDITEM 로고" width="168px">
+        </a>
+        <li>
+          <a href="advisor.html" class="margin-l">
+            <p>MEDITEM</p>
+            <p>서포터</p>
+          </a>
+        </li>
+        <li>
+          <a href="intro.html" class="margin-l">
+            <p>MEDITEM</p>
+            <p>소개</p>
+          </a>
+        </li>
+        <li>
+          <a href="id.html" class="margin-l">            
+            <p>MEDITEM</p>
+            <p>테스트</p>
+          </a>
+        </li>
+        <li>
+          <a href="history.html" class="margin-l">
+            <p>MEDITEM</p>
+            <p>검사이력</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <section>
+    <div class="form_wrap">
+      <h2 class="table_tit">| 회사(기관)정보 입력</h2>
+      <form action="임시">
+        <table class="id_table">
+          <tr>
+            <th colspan="5">신청분야</th>
+          </tr>
+          <tr>
+            <td rowspan="2">회사(기관명)</td>
+            <td>(한글명)</td>
+            <td>
+              <input type="text" name="busi_name_ko" id="ko_busi">
+            </td>
+            <td rowspan="2">사업자 등록번호</td>
+            <td rowspan="2">
+              <input type="text" name="busi_number" id="busi_number">
+            </td>
+          </tr>
+          <tr>
+            <td>(영문명)</td>
+            <td>
+              <input type="text" name="busi_name_en" id="en_busi">
+            </td>
+          </tr>
+          <tr>
+            <td>설립일</td>
+            <td colspan="2">
+              <input type="text" name="busi_establish" id="busi_establish">
+            </td>
+            <td>대표자</td>
+            <td>
+              <input type="text" name="busi_representative" id="busi_represent">
+            </td>
+          </tr>
+          <tr>
+            <td>홈페이지</td>
+            <td colspan="2">
+              <input type="text" name="busi_homepage" id="busi_homepage">
+            </td>
+            <td>대표자 이메일</td>
+            <td>
+              <input type="text" name="busi_email" id="busi_email">
+            </td>
+          </tr>
+          <tr>
+            <td>대표 전화번호</td>
+            <td colspan="2">
+              <input type="text" name="busi_pnum" id="busi_pnum">
+            </td>
+            <td>FAX 번호</td>
+            <td>
+              <input type="text" name="busi_fax" id="busi_fax">
+            </td>
+          </tr>
+          <tr>
+            <td>주소</td>
+            <td colspan="4">
+              <input type="text" name="busi_address" id="busi_address">
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">업무 담당자</td>
+            <td>성명</td>
+            <td>
+              <input type="text" name="charge_name" id="charge_name">
+            </td>
+            <td>전화번호</td>
+            <td>
+              <input type="text" name="charge_num" id="charge_num">
+            </td>
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td>
+              <input type="text" name="charge_email" id="charge_email">
+            </td>
+            <td>부서/직급</td>
+            <td>
+              <input type="text" name="charge_posi" id="charge_posi">
+            </td>
+          </tr>
+          <tr>
+            <th colspan="5">소프트웨어 정보</th>
+          </tr>
+          <tr>
+            <td rowspan="3">제품명</td>
+            <td>(한글명)</td>
+            <td>
+              <input type="text" name="product_name_ko" id="product_name_ko">
+            </td>
+            <td>제품 버전</td>
+            <td>
+              <input type="text" name="product_version" id="product_version">
+            </td>
+          </tr>
+          <tr>
+            <td>(영문명)</td>
+            <td>
+              <input type="text" name="product_name_en" id="product_name_en">
+            </td>
+            <td>제조사/제조국</td>
+            <td>
+              <input type="text" name="product_country" id="product_country">
+            </td>
+          </tr>
+          <tr>
+            <td>제품 개발 상황</td>
+            <td colspan="3">
+              <select name="project_status" id="project_status">
+                <option value="none">개발 상황</option>
+                <option value="ing">개발 진행 중</option>
+                <option value="done">개발 완료</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>보고서 용도</td>
+            <td>대분류</td>
+            <td>
+              <div class="bi_type">
+                <select name="big_type" id="big_type" onchange="twinType(this)">
+                  <option value="">-메디컬 트윈 종류-</option>
+                  <option value="persnal">개인맞춤의학</option>
+                  <option value="improve">의료조직개선</option>
+                  <option value="development">의약품, 의료기기개발</option>
+                </select>
+              </div>
+            </td>
+            <td>소분류</td>
+            <td>
+              <div class="sm_type">
+                <select id="small_type">
+                  <option value="">대분류를 선택하세요.</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>개요 및 특성<br>(300자 이내)</td>
+            <td colspan="4">
+              <textarea name="product_summary" id="product_summary" cols="30" rows="5"></textarea>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="nextpage">
+      <input type="button" value="다음 페이지" onclick="location.href='test.html'">
+    </div>
+  </section>
+  <!-- <footer>
+    <address>
+      <div class="ft-address">
+        <p>[35365] 대전 광역시 서구 관저동 관저동로 158 </p>
+        <br>
+        <p>건양대학교 대전 메디컬캠퍼스 8층 의료IT공학과</p>
+      </div>
+    </address>
+  </footer>
+  <aside>
+    <a href="#">
+      <div class="top">
+        <p>top</p>
+      </div>
+    </a>
+  </aside>
+  -->
+  <script src="../js/id.js"></script>
+</body>
+</html>

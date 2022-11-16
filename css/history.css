@@ -11,7 +11,7 @@ section .history_wrap {
 }
 section .history_tit {
   position: absolute;
-  top: 100px;
+  top: 80px;
   left: 200px;
   font-size: 30px;
   font-weight: bold;
