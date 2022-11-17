@@ -7,6 +7,8 @@
   <title>M E D I T E M intro</title>
   <link rel="stylesheet" href="../css/headerfooter.css">
   <link rel="stylesheet" href="../css/intro.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../js/intro.js"></script>
 </head>
 <body>
   <header>
@@ -43,22 +45,53 @@
     </div>
   </header>
 
-  <!-- 채린 작업 -->
   <section>
-    <div class="intro_meditem">
-      회사 소개 입니당.
-    </div>
-    
-    <div class="bar"></div>
-
-    <div class="intro_officer">
-      <img src="../img/오각형 조직도.png" alt="조직도" width="500px">
+    <h2 class="tit_h2">MediTEM 소개</h2>
+    <div class="menu">
+      <a class="single" target="1">회사 조직도</a>
+      <a class="single" target="2">MediTEM_CI</a>
+      <a class="single" target="3">찾아오시는 길</a>
     </div>
 
-    <div class="bar"></div>
+    <!-- 회사 조직도 -->
+    <div id="tab1" class="target">
+      회사조직도입니다.
+    </div>
 
-    <div class="intro_come">
-      오시는 길 입니당.
+    <!-- MediTEM CI -->
+    <div id="tab2" class="target">
+      <div class="ci_wrap">
+        <p class="tit_ci">워드마크</p>
+        <div class="word_mark">
+          <div class="meditem_img"></div>
+          <div class="meditem_des">
+            <p>
+              <sapn class="meditem_green">MedI</sapn><sapn class="meditem_red">T</sapn><span class="meditem_orange">em</sapn>
+              <span class="meditem_black">( Medical Twin Item )</span>
+            </p>
+            <p>"메디컬 트윈 아이템을 만든다"는 의미로 </p>
+            <p>메디컬 트윈의 상위 개념인 디지털 트윈을 생각하여 가상현실 안에 있다는 느낌을 구현하기 위해 타원형의 테두리를 주었습니다.</p>
+          </div>
+        </div>
+        <div class="down_img">
+          <div class="down_jpg">
+            <span>JPG 다운로드</span>
+            <div class="down_icon"></div>
+          </div>
+          <div class="down_png">
+            <span>PNG 다운로드</span>
+            <div class="down_icon"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ci_wrap">
+        <p class="tit_ci">프로젝트명 로고 타입</p>
+      </div>
+    </div>
+
+    <!-- 찾아오시는 길 -->
+    <div id="tab3" class="target">
+      찾아오시는 길입니다.
     </div>
   </section>
 

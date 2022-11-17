@@ -1,29 +1,132 @@
 * {
   padding: 0;
   margin: 0;
-  font: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
 }
-
 .bar {
   width: 3px;
   height: 100px;
-  background-color: black;
   margin: 0 auto;
+  background-color: black;
 }
-
+.word_mark::after, 
+.down_img::after, 
+.down_jpg::after, 
+.down_png::after {
+  display: block;
+  content: "";
+  clear: both;
+}
 section {
-  width: 1200px;
+  background-color: blanchedalmond;
+  width: 100%;
+}
+section .tit_h2 {
+  text-align: center;
+  padding: 50px 0;
+}
+section .menu {
+  background-color: aquamarine;
+  width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
-
-/* 상현 작업 */
-.intro_meditem {
-
+section .menu a {
+  display: inline-block;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #d2d2d2;
+  border-top: 1.5px solid #555555;
+  border-right: 1.5px solid #555555;
+  border-left: 1.5px solid #555555;
+  border-bottom: 3px solid #555555;
+  text-align: center;
 }
-.intro_officer {
-
+section .menu a:nth-child(n+2):nth-child(-n+3) {
+  margin-left: 30px;
 }
-.intro_come {
-
+section .target {
+  background-color: yellowgreen;
+  width: 1000px;
+  /* height: 500px; */
+  margin: 0 auto;
+}
+section #tab2, #tab3 {
+  display: none;
+}
+section .ci_wrap {
+  padding: 30px;
+}
+section .tit_ci {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(54, 188, 155);
+  padding-bottom: 30px;
+}
+section .ci_wrap .meditem_img {
+  background: url("../img/MedITEM_logo.png") 0 0 no-repeat;
+  background-size: 272px;
+  background-position-x: center;
+  background-position-y: 39px;
+  width: 300px;
+  height: 216px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  float: left;
+}
+section .ci_wrap .meditem_des {
+  background-color: azure;
+  width: 605px;
+  margin-left: 35px;
+  float: left;
+}
+.meditem_des p {
+  padding: 20px 0;
+  font-size: 16px;
+}
+.meditem_green, .meditem_red, .meditem_orange {
+  font-size: 25px;
+  font-weight: bold;
+}
+.meditem_green {
+  color: rgb(54, 188, 155);
+}
+.meditem_red {
+  color: rgb(209, 24, 14);
+}
+.meditem_orange {
+  color: rgb(255, 138, 61);
+}
+.meditem_black {
+  color: #000;
+}
+.down_img {
+  background-color: antiquewhite;
+  padding: 0 6.5px;
+  box-sizing: border-box;
+  color: rgb(54, 188, 155);
+}
+.down_img span {
+  float: left;
+}
+.down_jpg, .down_png {
+  float: left;
+  border: 1px solid rgb(54, 188, 155);
+  border-bottom: 3px solid rgb(54, 188, 155);
+  box-sizing: border-box;
+  margin-top: 30px;
+  cursor: pointer;
+  padding: 3px;
+}
+.down_png {
+  margin-left: 15px;
+}
+.down_icon {
+  background: url("../img/img_download_icon.png") 0 0 no-repeat;
+  background-size: 20px;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  float: left;
 }
