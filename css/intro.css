@@ -2,9 +2,6 @@
   padding: 0;
   margin: 0;
 }
-body {
-  height: 2000px;
-}
 .bar {
   width: 3px;
   height: 100px;
@@ -15,16 +12,22 @@ body {
 .down_img::after, 
 .down_jpg::after, 
 .down_png::after,
-.k4s_wrap::after {
+.k4s_wrap::after,
+.color_wrap::after {
   display: block;
   content: "";
   clear: both;
+}
+body {
+  height: 1800px;
 }
 section {
   /* background-color: blanchedalmond; */
   width: 100%;
 }
 section .tit_h2 {
+  width: 1000px;
+  margin: 0 auto;
   text-align: center;
   padding: 50px 0;
 }
@@ -37,6 +40,7 @@ section .menu {
 section .menu a {
   /* background-color: #d2d2d2; */
   display: inline-block;
+  position: relative;
   cursor: pointer;
   width: 150px;
   height: 40px;
@@ -46,6 +50,24 @@ section .menu a {
   border-left: 1.5px solid #555555;
   border-bottom: 3px solid #555555;
   text-align: center;
+}
+section .menu a:hover {
+  color: #fff;
+  transition: 0.1s;
+}
+section .menu a::before {
+  position: absolute;
+  background: rgb(54, 188, 155);
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.1s ease-in;
+}
+section .menu a:hover::before {
+  top: 0;
 }
 section .menu a:nth-child(n+2):nth-child(-n+3) {
   margin-left: 30px;
@@ -65,7 +87,7 @@ section .tit_ci {
   font-size: 24px;
   font-weight: bold;
   color: rgb(54, 188, 155);
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 section .ci_wrap .meditem_img {
   background: url("../img/MedITEM_logo.png") 0 0 no-repeat;
@@ -75,6 +97,7 @@ section .ci_wrap .meditem_img {
   width: 300px;
   height: 216px;
   border: 1px solid #000;
+  border-bottom: 3px solid #000;
   box-sizing: border-box;
   float: left;
 }
@@ -85,10 +108,10 @@ section .ci_wrap .meditem_des {
   float: left;
 }
 .meditem_des p {
-  padding: 20px 0;
-  font-size: 16px;
+  padding: 18px 0;
+  font-size: 18px;
 }
-.meditem_green, .meditem_red, .meditem_orange {
+.meditem_green, .meditem_red, .meditem_orange, .meditem_black {
   font-size: 25px;
   font-weight: bold;
 }
@@ -106,7 +129,7 @@ section .ci_wrap .meditem_des {
 }
 .down_img {
   /* background-color: antiquewhite; */
-  padding: 0 6.5px;
+  padding: 0 3.5px;
   box-sizing: border-box;
   color: rgb(54, 188, 155);
 }
@@ -137,12 +160,10 @@ section .ci_wrap .meditem_des {
 
 .des_logo {
   padding: 0 30px 30px 30px;
+  font-size: 17px;
 }
-.tit_k4s {
+.tit_k4s, .tit_color {
   padding-top: 20px;
-}
-.k4s_wrap {
-  /* background-color: bisque; */
 }
 .k4s_sub_wrap {
   /* background-color: aliceblue; */
@@ -155,6 +176,7 @@ section .ci_wrap .meditem_des {
   font-size: 14px;
   font-weight: bold;
   border: 1px solid #000;
+  border-bottom: 3px solid #000;
   box-sizing: border-box;
 }
 .img_k4s_design {
@@ -178,5 +200,48 @@ section .ci_wrap .meditem_des {
 }
 .k4s_des {
   float: left;
-  padding: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  font-size: 18px;
+}
+.des_color {
+  padding: 0 20px;
+  font-size: 17px;
+}
+.color_box {
+  width: 300px;
+  float: left;
+  margin-left: 25px;
+  border: 1px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+.box_green, .box_red, .box_orange {
+  width: 300px;
+  height: 80px;
+}
+.box_green {
+  background-color: rgb(54, 188, 155);
+}
+.box_red {
+  background-color: rgb(209, 24, 14);
+}
+.box_orange {
+  background-color: rgb(255, 138, 61);
+}
+.des_green, .des_red, .des_orange {
+  height: 80px;
+  /* background-color: azure; */
+}
+.des_green p:nth-child(1),
+.des_red p:nth-child(1),
+.des_orange p:nth-child(1) {
+  padding: 10px 0 0 20px;
+}
+.des_green p:nth-child(2),
+.des_red p:nth-child(2),
+.des_orange p:nth-child(2) {
+  text-align: center;
+  margin-top: 13px;
+  font-weight: bold;
 }
