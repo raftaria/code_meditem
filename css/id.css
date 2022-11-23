@@ -21,8 +21,9 @@ section table, td {
 }
 section th {
   height: 30px;
-  background-color: #e6e6e6;
+  background-color: #42caa8;
   font-size: 20px;
+  color: #f4f4f4;
 }
 section td {
   height: 30px;

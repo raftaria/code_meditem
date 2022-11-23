@@ -236,3 +236,137 @@ section .ci_wrap .meditem_des {
   margin-top: 13px;
   font-weight: bold;
 }
+
+.chart_wrap {
+  margin: 0 auto;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+.chart_img {
+  background: url("../img/img_project_table.png") 0 0 no-repeat;
+  background-size: 800px;
+  background-position: center;
+  margin: 0 auto;
+  width: 900px;
+  height: 450px;
+  border: 1px solid #000;
+  padding: 20px;
+}
+.chart_img_lab {
+  background: url("../img/img_project_lab.png") 0 0 no-repeat;
+  background-size: 800px;
+  background-position: center;
+  margin: 0 auto;
+  width: 900px;
+  height: 570px;
+  border: 1px solid #000;
+  padding: 20px;
+}
+.chart_task {
+  margin-top: 50px;
+}
+.chart_table, .chart_table_lab {
+  width: 800px;
+  height: 200px;
+  margin: 0 auto;
+  border: 1px solid #444;
+  border-collapse: collapse;
+  text-align: center;
+}
+.chart_table th, .chart_table td, .chart_table_lab th,  .chart_table_lab td {
+  border: 1px solid #000;
+}
+.chart_table th, .chart_table_lab th {
+  background-color: rgb(62, 207, 171);
+  height: 40px;
+}
+.chart_table td, .chart_table_lab td {
+  height: 35px;
+}
+
+.come_wrap {
+  padding: 30px;
+  margin: 0 auto;
+}
+.come_img1 {
+  background: url("../img/img_map.png") 0 0 no-repeat;
+  background-size: 800px;
+  background-position: center;
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+}
+.come_address, .come_train, .come_bus, .come_come, .come_noti {
+  padding: 30px 0;
+  width: 1000px;
+}
+.come_address p:nth-child(2) {
+  margin-left: 100px;
+}
+.come_train_table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  width: 800px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.come_train_table th {
+  background-color: rgb(54, 188, 155);
+  border: 1px solid #000;
+}
+.come_train_table td {
+  border: 1px solid #000;
+}
+.come_train ul {
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+.come_bus {
+  width: 1000px;
+}
+.come_bus table {
+  width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+.come_bus table th {
+  background-color: rgb(54, 188, 155);
+  height: 30px;
+}
+.come_bus th, td {
+  border: 1px solid #000;
+}
+.come_bus table td {
+  height: 60px;
+}
+.come_come p:nth-child(2) {
+  text-align: center;
+}
+.come_noti {
+  width: 1000px;
+  margin: 0 auto;
+}
+.come_img_wrap {
+  background-color: rgb(54, 188, 155);
+  padding: 30px 0;
+  width: 900px;
+  margin: 0 auto;
+}
+.come_img2 {
+  background: url("../img/img_map2.png") 0 0 no-repeat;
+  background-size: 840px;
+  margin: 0 auto;
+  width: 840px;
+  height: 475px;
+}
+.come_img3 {
+  background: url("../img/img_mapping.png") 0 0 no-repeat;
+  background-size: 840px;
+  margin: 0 auto;
+  width: 840px;
+  height: 140px;
+  margin-top: 30px;
+}
