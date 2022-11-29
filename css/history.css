@@ -59,8 +59,9 @@ th, td {
 }
 th {
   height: 50px;
-  background-color: rgb(172, 253, 226);
+  background-color: rgb(111, 185, 255);
   border-bottom: 1.2px solid #666;
+  color: #fff;
 }
 td {
   height: 50px;

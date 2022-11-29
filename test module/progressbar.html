@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #test_progress {
+      display: flex;
+      overflow: hidden;
+      font-size: .75rem;
+      line-height: 1rem;
+      text-align: center;
+      background-color: #4278ae;
+      border-radius: 10px;
+      width: 55%;
+      margin: 0px auto 10px auto;
+      height: 25px; /*진행바 높이 조정*/
+    }
+
+    /*진행바 배경*/
+    progress[value]::-webkit-progress-bar {
+      background-color: #eee;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    /*진행바 색*/
+    progress[value]::-webkit-progress-value {
+      background-color: #4267B2;
+    }
+  </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script>
+    //진행바 & 라디오 버튼
+    $(function() {
+      var $progress = $('#test_progress');
+      var $wrapper = $('#wrapper');
+
+      $wrapper.find('.choice').prop('checked', false);
+
+      var total = $wrapper.find('.fontt').length;
+
+      $wrapper.on('change', '.choice', function() {
+        var checked = $wrapper.find('.choice:checked').length;
+        $progress.val(Number(checked * 100 / total));
+      });
+    });
+  </script>
+</head>
+<body>
+  <progress value="0" max="100" id="test_progress"></progress>
+
+  <div id="wrapper">
+    <section class="fontt">
+      <h3>문항 1. <span class="na-me"></span>(이)의 사람과의 관계</h3>
+      <label><input type="radio" name="43" class="choice" value="1">연령에 적절하게 수줍어하는 성격이거나, 산만하게 활동적이 성격이다.</label><br>
+      <label><input type="radio" name="43" class="choice" value="2">어른과 눈맞춤이 적다. 눈맞춤을 강요하면 도망가기도 한다.</label><br>
+      <label><input type="radio" name="43" class="choice" value="3">주변을 의식하지 못하는 듯 혼자 논다. 아동의 주의를 끌기 위해서 노력해야 한다.</label><br>
+      <label><input type="radio" name="43" class="choice" value="4">아동의 주의를 끌기 위해 노력해도 거의 주의를 끌기가 어렵다. 아동은 자발적 접촉을 거의 하지 않는다.</label>
+    </section>
+    
+    <section class="fontt">
+      <h3>문항 2. <span class="na-me"></span>(이)의 모방</h3>
+      <label><input type="radio" name="44" class="choice" value="1">연령에 적절하게 언어와 행동을 모방한다.</label><br>
+      <label><input type="radio" name="44" class="choice" value="2">박수나 한음절 소리 증 매우 간단한 것만을 모방한다.</label><br>
+      <label><input type="radio" name="44" class="choice" value="3">간단한 것이라도 모방을 하기도 하고 안하기도 한다. 얼마 후에 모방하는 경향이 있다.</label><br>
+      <label><input type="radio" name="44" class="choice" value="4">모방은 전혀 없다.</label>
+    </section>
+
+    <section class="fontt">
+      <h3>문항 3. <span class="na-me"></span>(이)의 정서 반응</h3>
+      <label><input type="radio" name="45" class="choice" value="1">기뻐하고 슬퍼하고 놀라고 무서워하는 등 정서 반응을 상황과 적절하게 나타낸다.</label><br>
+      <label><input type="radio" name="45" class="choice" value="2">가끔씩 상황과 관계없는 정서 반응을 보인다.</label><br>
+      <label><input type="radio" name="45" class="choice" value="3">정서 반응도 다양하지 않으며 상황과 무관한 정서 반응을 자주 보인다.</label><br>
+      <label><input type="radio" name="45" class="choice" value="4">거의 대부분의 정서 반응이 상황과 부적절하다. 알 수 없는 이유로 우울해 하거나 즐거워 한다.</label>
+    </section>
+    
+    <section class="fontt">
+      <h3>문항 4. <span class="na-me"></span>(이)의 신체 사용</h3>
+      <label><input type="radio" name="46" class="choice" value="1">몸 움직임이 안정적이며 민첩하다.</label><br>
+      <label><input type="radio" name="46" class="choice" value="2">둔하고 반복적인 움직임이 있다.</label><br>
+      <label><input type="radio" name="46" class="choice" value="3">몸 흔들기, 빙빙 돌기, 손가락 흔들기, 까치발 들기 등 이상한 행동을 한다.</label><br>
+      <label><input type="radio" name="46" class="choice" value="4">3번에서 제시한 이상한 행동이 매우 심해 그만두게 하기가 힘들다.</label>
+    </section>
+  </div>
+</body>
+</html>

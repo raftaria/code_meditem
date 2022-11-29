@@ -277,8 +277,9 @@ section .ci_wrap .meditem_des {
   border: 1px solid #000;
 }
 .chart_table th, .chart_table_lab th {
-  background-color: rgb(62, 207, 171);
+  background-color: rgb(111, 185, 255);
   height: 40px;
+  color: #fff;
 }
 .chart_table td, .chart_table_lab td {
   height: 35px;
@@ -312,8 +313,9 @@ section .ci_wrap .meditem_des {
   text-align: center;
 }
 .come_train_table th {
-  background-color: rgb(54, 188, 155);
+  background-color: rgb(111, 185, 255);
   border: 1px solid #000;
+  color: #fff;
 }
 .come_train_table td {
   border: 1px solid #000;
@@ -333,8 +335,9 @@ section .ci_wrap .meditem_des {
   text-align: center;
 }
 .come_bus table th {
-  background-color: rgb(54, 188, 155);
+  background-color: rgb(111, 185, 255);
   height: 30px;
+  color: #fff;
 }
 .come_bus th, td {
   border: 1px solid #000;
@@ -350,7 +353,7 @@ section .ci_wrap .meditem_des {
   margin: 0 auto;
 }
 .come_img_wrap {
-  background-color: rgb(54, 188, 155);
+  background-color: rgb(111, 185, 255);
   padding: 30px 0;
   width: 900px;
   margin: 0 auto;

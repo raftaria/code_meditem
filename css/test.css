@@ -1,0 +1,97 @@
+section {
+  width: 100%;
+  position: relative;
+}
+section .test_wrap {
+  position: absolute;
+  width: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section .tit_test {
+  padding: 50px 0 40px 100px;
+}
+section .progress {
+  width: 800px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: pink;
+}
+section .test_form {
+  margin: 40px auto;
+  width: 1000px;
+  height: 600px;
+  border: 1px solid #777;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+.test_form::-webkit-scrollbar {
+  width: 5px;
+}
+.test_form::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 138, 61);
+  border-radius: 2.5px;
+}
+.test_form::-webkit-scrollbar-track {
+  background-color: rgba(54, 188, 155, 0.3);
+  border-radius: 2.5px;
+}
+section.question_wrap {
+  width: 600px;
+  margin: 30px auto;
+}
+section .answer_wrap {
+  margin: 20px 0 0 40px;
+}
+section .question {
+  margin-top: 40px;
+}
+section [type="radio"] {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border: max(2px, 0.1em) solid rgb(54, 188, 155);
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+  appearance: none;
+}
+section [type="radio"]:checked {
+  border: 15px solid rgb(54, 188, 155);
+}
+section [type="radio"]:hover {
+  transition: 0.4s;
+  box-shadow: 0 0 0 max(4px, 0.2em) rgba(54, 188, 155, 0.4);
+  cursor: pointer;
+}
+.answer_wrap .choice {
+  margin-left: 20px;
+}
+label span {
+  vertical-align: middle;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+/* 진행바 */
+#test_progress {
+  display: flex;
+  overflow: hidden;
+  background-color: #d2d2d2;
+  border-radius: 15px;
+  width: 55%;
+  height: 25px;
+  margin: 0px auto 10px auto;
+}
+/* 진행바 배경 */
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset;
+}
+/* 진행바 색 */
+progress[value]::-webkit-progress-value {
+  background-color: rgb(111, 185, 255);
+  transition: 0.5s ease-out;  
+}
