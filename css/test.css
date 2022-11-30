@@ -31,7 +31,7 @@ section .test_form {
   width: 5px;
 }
 .test_form::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 138, 61);
+  background-color: rgba(255, 138, 61, 0.8);
   border-radius: 2.5px;
 }
 .test_form::-webkit-scrollbar-track {
@@ -58,7 +58,7 @@ section [type="radio"] {
   appearance: none;
 }
 section [type="radio"]:checked {
-  border: 15px solid rgb(54, 188, 155);
+  border: 15px solid rgba(54, 188, 155, 0.8);
 }
 section [type="radio"]:hover {
   transition: 0.4s;
@@ -92,6 +92,7 @@ progress[value]::-webkit-progress-bar {
 }
 /* 진행바 색 */
 progress[value]::-webkit-progress-value {
-  background-color: rgb(111, 185, 255);
+  background-color: rgba(54, 188, 155, 0.7);
+  /* background-color: rgb(111, 185, 255); */
   transition: 0.5s ease-out;  
 }

@@ -59,7 +59,7 @@ th, td {
 }
 th {
   height: 50px;
-  background-color: rgb(111, 185, 255);
+  background-color: rgba(111, 185, 255, 0.8);
   border-bottom: 1.2px solid #666;
   color: #fff;
 }
@@ -87,6 +87,36 @@ table .test_date {
 }
 table .test_result {
   width: 150px;
+}
+table .btn_style1 {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(35, 255, 35);
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  line-height: 25px;
+  font-weight: bold;
+}
+table .btn_style2 {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 145, 0);
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  line-height: 25px;
+  font-weight: bold;
+}
+table .btn_style3 {
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 35, 35, 0.8);
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  line-height: 25px;
+  font-weight: bold;
 }
 
 /* 반응형 테블릿 */
