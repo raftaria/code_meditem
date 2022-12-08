@@ -82,7 +82,7 @@
             <td colspan="2">
               <input type="text" name="busi_homepage" id="busi_homepage">
             </td>
-            <td>대표자 이메일</td>
+            <td>대표 이메일</td>
             <td>
               <input type="text" name="busi_email" id="busi_email">
             </td>
@@ -152,9 +152,9 @@
             <td>제품 개발 상황</td>
             <td colspan="3">
               <select name="project_status" id="project_status">
-                <option value="none">개발 상황</option>
-                <option value="ing">개발 진행 중</option>
-                <option value="done">개발 완료</option>
+                <option value="">개발 상황</option>
+                <option value="개발 진행 중">개발 진행 중</option>
+                <option value="개발 완료">개발 완료</option>
               </select>
             </td>
           </tr>
@@ -165,9 +165,9 @@
               <div class="bi_type">
                 <select name="big_type" id="big_type" onchange="twinType(this)">
                   <option value="">-메디컬 트윈 종류-</option>
-                  <option value="persnal">개인맞춤의학</option>
-                  <option value="improve">의료조직개선</option>
-                  <option value="development">의약품, 의료기기개발</option>
+                  <option value="개인맞춤의학">개인맞춤의학</option>
+                  <option value="의료조직개선">의료조직개선</option>
+                  <option value="의약품, 의료기기개발">의약품, 의료기기개발</option>
                 </select>
               </div>
             </td>
@@ -190,7 +190,7 @@
       </form>
     </div>
     <div class="nextpage">
-      <input type="button" value="다음 페이지" onclick="location.href='test.html'">
+      <input type="button" value="다음 페이지" onclick="location.href='test.html'" id="btn_test">
     </div>
   </section>
   <script src="../js/id.js"></script>
