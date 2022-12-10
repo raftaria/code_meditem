@@ -42,6 +42,23 @@ section.question_wrap {
   width: 600px;
   margin: 30px auto;
 }
+.question_wrap h3 {
+  display: block;
+}
+.question_wrap h3::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.question_wrap h3 p:nth-child(1){
+  float: left;
+  width: 45px;
+}
+.question_wrap h3 p:nth-child(2) {
+  width: 550px;
+  float: left;
+  word-break: keep-all;
+}
 section .answer_wrap {
   margin: 20px 0 0 40px;
 }
@@ -66,7 +83,7 @@ section [type="radio"]:hover {
   cursor: pointer;
 }
 .answer_wrap .choice {
-  margin-left: 20px;
+  margin-left: 50px;
 }
 label span {
   vertical-align: middle;
@@ -80,7 +97,7 @@ label span {
   overflow: hidden;
   background-color: #d2d2d2;
   border-radius: 15px;
-  width: 55%;
+  width: 70%;
   height: 25px;
   margin: 0px auto 10px auto;
 }
@@ -93,6 +110,27 @@ progress[value]::-webkit-progress-bar {
 /* 진행바 색 */
 progress[value]::-webkit-progress-value {
   background-color: rgba(54, 188, 155, 0.7);
-  /* background-color: rgb(111, 185, 255); */
   transition: 0.5s ease-out;  
+}
+
+.btn_report {
+  position: relative;
+}
+.btn_report input {
+  cursor:pointer;
+  width: 150px;
+  height: 70px;
+  font-size: 17.3px;
+  border: 1px solid #d2d2d2;
+  border-bottom: 2px solid #bbb;
+  position: absolute;
+  top: -110px;
+  right: -140px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+.btn_report input:hover {
+  background-color: rgba(54, 188, 155, 0.8);
+  border: 2px solid skyblue;
+  transition: 0.3s;
 }

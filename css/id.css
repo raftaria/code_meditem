@@ -79,10 +79,11 @@ section .nextpage {
   border-left: 1px solid #afafaf;
   border-right: 1px solid #afafaf;
   border-bottom: 3px solid #afafaf;
+  transition: 0.3s ease-in-out;
 }
 .nextpage input:hover {
   background-color: rgb(148, 233, 220);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 /* 반응형 태블릿 */

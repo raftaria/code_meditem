@@ -45,10 +45,18 @@ const en_product = document.querySelector('#product_name_en');
 const product_version = document.querySelector('#product_version');
 const product_country = document.querySelector('#product_country');
 const project_status = document.querySelector('#project_status');
-const big_type = document.querySelector('#big_type');
-const small_type = document.querySelector('#small_type');
+const bigtype = document.querySelector('#big_type');
+const smalltype = document.querySelector('#small_type');
 const product_summary = document.querySelector("#product_summary");
 const btn = document.querySelector("#btn_test");
+const var_input = document.querySelectorAll('input');
+console.log(var_input.length);
+const arr_id = [
+  "회사명(한글)", "사업자 등록번호", "회사명(영문)",
+  "설립일", "대표자", "홈페이지", "대표 이메일", "대표 전화번호", "FAX 번호",
+  "주소", "당담자 성명", "담당자 전화번호", "담당자 이메일", "담당자 직급",
+  "제품명(한글)", "제품 버전", "제품명(영문)", "제조사/제조국", "개요 및 특성"
+];
 
 ko_busi.addEventListener('input', (e) => {
   localStorage.setItem("ko_busi", e.target.value);
@@ -107,12 +115,48 @@ product_country.addEventListener('input', (e) => {
 project_status.addEventListener('input', (e) => {
   localStorage.setItem("project_status", e.target.value);
 });
-big_type.addEventListener('input', (e) => {
+bigtype.addEventListener('input', (e) => {
   localStorage.setItem("big_type", e.target.value);
 });
-small_type.addEventListener('input', (e) => {
+smalltype.addEventListener('input', (e) => {
   localStorage.setItem("small_type", e.target.value);
 });
 product_summary.addEventListener('input', (e) => {
   localStorage.setItem("product_summary", e.target.value);
 });
+
+
+function checkBlank() {
+  const big_value = ["개인맞춤의학", "의료조직개선", "의약품, 의료기기개발"]
+  const test_url = ["testpersonal.html", "testimprove.html", "testdevelop.html"]
+  
+  for(var i = 0; i < var_input.length; i++) {
+    if(var_input[i].value === "") {
+      alert("\'" + arr_id[i] + "\'" + " 칸이 비어있습니다.");
+      return;
+    }
+  }
+  if(project_status.value === "") {
+    alert("개발 상황을 선택하세요");
+    return;
+  }
+  for(var i = 0; i < big_value.length; i++) {
+    if(bigtype.value === "") {
+      alert("대분류를 선택하세요.");
+      return;
+    }
+    else if(bigtype.value === big_value[i]) {
+      if(smalltype.value === "소분류를 선택하세요") {
+        alert("소분류를 선택하세요");
+        return;
+      }
+      else if(product_summary.value === "") {
+        alert("\'" + arr_id[18] + "\'" + " 칸이 비어있습니다.");
+        return;
+      }
+      else {
+        window.location.href = test_url[i];
+      }
+    }
+  }
+}
