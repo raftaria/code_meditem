@@ -32,7 +32,7 @@ function allCheck() {
 
 // 점수 계산하기
 function calculate(num) {
-  var score = 1;
+  var score = 999;
   var ansNodeList = document.getElementsByName(num);
   ansNodeList.forEach((node) => {
     if (node.checked) {
