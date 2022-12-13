@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Result Report</title>
+
+	<link rel="stylesheet" href="../css/headerresult.css">
+	<link href="../css/result.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<!-- 합쳐지고 최소화된 최신 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!-- 부가적인 테마 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script><!--bar chart-->
+	<script src="../js/result.js"></script>
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			border: 1px solid gray;
+		}
+		.graph_wrap::after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+		.graph_wrap {
+			margin-left: 70px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="header_wrap">
+			<ul>
+				<a href="../main.html" class="tdn">
+					<img src="../img/MedITEM_logo.png" alt="MEDITEM 로고" width="168px">
+				</a>
+				<li>
+					<a href="advisor.html" class="margin-l">
+						<p>MEDITEM</p>
+						<p>서포터</p>
+					</a>
+				</li>
+				<li>
+					<a href="intro.html" class="margin-l">
+						<p>MEDITEM</p>
+						<p>소개</p>
+					</a>
+				</li>
+				<li>
+					<a href="id.html" class="margin-l">            
+						<p>MEDITEM</p>
+						<p>테스트</p>
+					</a>
+				</li>
+				<li>
+					<a href="history.html" class="margin-l">
+						<p>MEDITEM</p>
+						<p>검사이력</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	
+	<div class="d-flex" id="wrapper">
+		
+		<!-- Page Content -->
+		<div id="page-content-wrapper" style="background:lightgray; width:100%; height:100%;padding: 0 30px;">
+			<input type="button" value="정보 기입하기" onclick="aaa()" style="position: relative; margin-top: 50px; margin-right: 10px; float: right; z-index: 999; width: 130px; height: 40px;">
+
+			<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom"></nav>
+
+			<div class="jb-bold jb-bigsize" style="float:left; padding:10px;">
+				테스트 결과 보고서
+			</div>
+			<div style="float:right; padding:10px;">
+				<input type="button" id='printBtn' value="출력" style="width:80px; height:40px" onclick="resultPrint()">
+			</div>
+
+			<div id="report1" style="background:gray; width:100%; height:100%; margin-top:100px;">
+
+				<!-- 시험성적서 -->
+				<div class="page" id="report_cover1">
+					<table border="3" width="100%" height="100%">
+						<th colspan="5" style="text-align:center; font:normal 3em/1em gothic;">시험성적서</th>
+						<tr>
+							<td colspan="2" style="text-align:center; width:40%;">
+								<p style="font:bold 1.8em/1em gothic;">건양대학교</p>
+								<p style="font:bold 1.5em/1em gothic;">MedITEM 연구소</p>
+								<p>주소: 대전 서구 관저동로 158 건양대학교 메디컬 캠퍼스</p>
+								<p>죽헌 정보관 801호</p>
+							</td>
+							<td colspan="2" style="text-align:center; width:30%;">성적서번호:</td>
+							<td style="text-align:center; width:30%;">
+								<img src="../img/K4S_logo.png" alt="K4S로고" style="width:200px;">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5">
+								<p style="font:bold 1em/1em gothic; padding:5px;">1. 의 뢰 자</p>
+								<p style="margin-left:20px">· 회사(기관)명 : <span class="busi_name"></span></p>
+								<p style="margin-left:20px">· 주소 : <span class="busi_address"></span></p>
+
+								<p style="font:bold 1em/1em gothic; padding:5px;">2. 제 품 명 : <span class="product_name"></span></p>
+								<p style="font:bold 1em/1em gothic; padding:5px;">3. 제품 버전 : <span class="product_version"></span></p>
+								<p style="font:bold 1em/1em gothic; padding:5px;">4. 제품 제조국 : <span class="product_country"></span></p>
+								<p style="font:bold 1em/1em gothic; padding:5px;">5. 제품 개요 : <span class="product_summary"></span></p>
+								<span style="font:bold 1em/1em gothic; padding:5px;">6. 시험방법 : MEDICAL TWIN KPI(핵심성과지표)</span>
+								<p></p>
+								<p></p>
+								<p style="font:bold 1em/1em gothic; padding:5px;">7. 시험결과 : <img src="" alt="test result"></p>
+								<br>
+								<p style="text-align:center;">이 성적서의 시험결과는 의뢰자에 의해 제공된 시험품에 한하며 용도 이외의 사용을 금합니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<p>확&nbsp&nbsp&nbsp인</p>
+							</td>
+							<td colspan="2" style="padding:5px;">
+								<p>작성자</p>
+								<p>성명 : (서명)</p>
+							</td>
+							<td colspan="2" style="padding:5px;">
+								<p>승인자</p>
+								<p>직 책 : </p>
+								<p>성명 : (서명)</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5" id="cover_date" style="text-align:right;">
+								<p style="padding:100px;">2019년 00월 00일</p>
+								<script type="text/javascript">
+									var d = new Date();
+									var month = d.getMonth() + 1;
+									var day = d.getDate();
+									var result = document.getElementById("cover_date");
+									result.style.fontSize = "1em";
+									result.style.fontWeight = "bold";
+									result.style.padding = "20px 30px 0 0";
+									result.innerHTML = d.getFullYear() + "년 " + month + "월 " + day + "일";
+								</script>
+								<p style="font:bold 1.5em/1em Georgia; padding:30px 0 0 0;">건양대학교 MedITEM (인)</p>
+							</td>
+						</tr>
+					</table>
+
+					<!-- 꼬리말 -->
+					<div>
+						<table border="0" width="100%" height="100%" style="margin-top:20px;" frame=void>
+							<tr>
+								<td style="font:normal 1em/1em; color:gray; text-align:left;">TIS-2011-2(00)</td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								</td>
+								<!-- <td id="pageNum" style="font:normal 1em/1em; color:gray; text-align:right;">페이지(1)/(총40) </td> -->
+							</tr>
+						</table>
+					</div>
+				</div>
+				<hr>
+
+				<!-- 시험결과서 -->
+				<div class="page" id="report_cover2" style="vertical-align:middle;">
+					<!-- 결과서번호 -->
+					<span style="padding-top:500px; font:bold 1.3em/1em gothic;">결과서번호 : </span>
+					<input type="text" id="reportNum"
+						style="text-align:left; width:200px; height:30px; font:bold 1.3em/1em gothic; border:0;"
+						placeholder="TGS">
+
+					<!-- 시험결과서 -->
+					<p style="padding:50px 0 0 10px; font:bold 2em/1em gothic;">시험결과서:</p>
+					<p style="padding:10px 0 0 10px; font:bold 2em/1em gothic;">G 코드</p>
+					<p style="padding:10px 0 0 10px; font:bold 2em/1em gothic;">G 시험</p><br><br><br><br><br>
+
+					<!-- K4S로고 -->
+					<div style="text-align:center;"><img src="../img/K4S_logo.png" alt="k4s 로고"
+							style="width:30%;"></div>
+
+					<!-- 날짜(년월일) -->
+					<p id="date" style="margin-top:100px;">
+						2019년 00월 00일
+					</p>
+					<script type="text/javascript">
+						var d = new Date();
+						var month = d.getMonth() + 1;
+						var day = d.getDate();
+						var result = document.getElementById("date");
+						result.style.fontFamily = "gothic";
+						result.style.fontSize = "1.5em";
+						result.style.textAlign = "center";
+						result.innerHTML = d.getFullYear() + "년 " + month + "월 " + day + "일";
+					</script>
+
+					<!-- 승인자, 작성자 -->
+					<div style="text-align:center; padding-top:20px">
+						<span>승인자 : </span>
+						<input type="text"
+							style="text-align:left; width:100px; height:30px; font:normal 1em/1em gothic; border:0;"
+							value="기술책임자">
+						<span style="font:normal 1em/1em gothic; text-decoration:underline;">(서명)</span>
+						<br>
+						<span>작성자 : </span>
+						<input type="text"
+							style="text-align:left; width:100px; height:30px; font:normal 1em/1em gothic; border:0;">
+						<span style="font:normal 1em/1em gothic; text-decoration:underline;">(서명)</span>
+					</div>
+
+
+					<!-- 한국정보통신기술협회(TTA) -->
+					<div style="text-align:center; padding-top:20px">
+						<p style="font:bold 2em/1em gothic;">건양대학교 MedITEM</p>
+						<p style="font:bold 1em/1em gothic;">Konyang University MedITEM</p>
+					</div>
+
+
+					<p style="color:gray; padding-top:20px;">본 문서는 건양대학교(Konyang University) 메디템연구소의 시험결과서로 메디템(MedITEM)
+						승인 없이 문서의 전부 또는 일부를 발췌하여 배포, 복제 및 이용할 수 없습니다.</p>
+
+					<!-- 꼬리말 -->
+					<div>
+						<table border="0" width="100%" height="100%" style="text-align:center; margin-top:20px" frame=void>
+							<tr>
+								<td style="font:normal 1em/1em; color:gray; text-align:left;">TIS-2011-2(00)</td>
+								<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+								</td>
+								<!-- <td id="pageNum" style="font:normal 1em/1em; text-align:right; color:gray;">페이지(1)/(총40)</td> -->
+							</tr>
+						</table>
+					</div>
+				</div>
+				<hr>
+
+				<!-- 목차 부분 -->
+				<div class="page" id="report_index">
+					<p id="index">
+						목차
+					</p>
+					<p id="index_item"></p>
+					1.개요
+					.......................................................................................................................4
+					</p>
+					<p style="margin-left:20px">1.1 회사
+						개요........................................................................................................4
+					</p>
+					<p style="margin-left:20px">1.2 제품
+						개요........................................................................................................4
+					</p>
+					<br>
+					2. 시험목적 및 절차
+					..................................................................................................5
+					</p>
+					<p style="margin-left:20px">2.1 시험
+						목적........................................................................................................5
+					</p>
+					<br>
+					3.
+					시험항목................................................................................................................6
+					</p>
+					<br>
+					4.
+					시험결과................................................................................................................7
+					</p>
+
+					<p style="margin-left:20px">4.1 문항별 응답
+						내역............................................................................................7</p>
+				</div>
+				<hr>
+
+				<!-- 개요 부분 -->
+				<div class="page" id="report_summary">
+					<h2>1. 개요</h2>
+					<h5>&nbsp&nbsp본 문서는 메디템연구소에서 수행한 "K4S"에 대한 시험결과서이다. 본 결과서에서는 시험절차 및 방법에 대한 일반적인 사항을 설명하고 주어진 시험환경에서 확인된
+						시험결과를 기술하였다.</h5>
+					<br>
+					<p style="margin-left:20px">
+						<h4>1.1 회사 개요</h4>
+
+						<table border="1" style="width:600px" height="200">
+							<tr>
+								<th style="text-align:center;" class="table-background-color" width="30" colspan="2">
+									회사(기관)명</th>
+								<td width="200" class="busi_name">&nbsp;</td>
+								<th style="text-align:center;" width="150" class="table-background-color">대표자</th>
+								<td width="150" class="busi_represent">&nbsp;</td>
+							</tr>
+							<tr>
+								<th style="text-align:center;" colspan="2" class="table-background-color">설립일</th>
+								<td class="busi_establish">&nbsp;</td>
+								<th style="text-align:center;" class="table-background-color">사업자등록번호</th>
+								<td class="busi_number">&nbsp;</td>
+							</tr>
+							<tr>
+								<th style="text-align:center;" colspan="2" class="table-background-color">전화번호</th>
+								<td class="busi_pnum">&nbsp;</td>
+								<th style="text-align:center;" class="table-background-color">FAX번호</th>
+								<td class="busi_fax">&nbsp;</td>
+							</tr>
+							<tr>
+								<th style="text-align:center;" colspan="2" class="table-background-color">대표자 E-mail
+								</th>
+								<td class="charge_email">&nbsp;</td>
+								<th style="text-align:center;" class="table-background-color">홈페이지</th>
+								<td class="busi_home">&nbsp;</td>
+							</tr>
+							<tr>
+								<td style="text-align:center;" class="table-background-color">주소</td>
+								<td style="text-align:center;" class="table-background-color">본사</td>
+								<td colspan="3" class="busi_address">&nbsp;</td>
+							</tr>
+	
+						</table>
+						<br>
+						<h4>1.2 제품 개요</h4>
+						<table border="1" style="width:600px">
+							<tr>
+								<th style="text-align:center;" width="30" class="table-background-color">제품명</th>
+								<td width="200" class="product_name"></td>
+							</tr>
+							<tr>
+								<th style="text-align:center;" class="table-background-color"> 제품 버전</th>
+								<td class="product_version"></td>
+							</tr>
+							<tr>
+								<th style="text-align:center;" class="table-background-color">제품 개발 상황</th>
+								<td class="product_status">
+								</td>
+							</tr>
+							<tr>
+								<th style="text-align:center;" class="table-background-color">대분류</th>
+								<td style="padding-left:10px;" class="big_type"></td>
+							</tr>
+							<tr>
+								<th style="text-align:center;" class="table-background-color">소분류</th>
+								<td style="padding-left:10px;" class="small_type"></td>
+							</tr>
+						</table>
+						
+					<!-- 꼬리말 -->
+					<div>
+						<table border="0" width="100%" height="100%" style="text-align:center; margin-top:20px" frame=void>
+							<tr>
+								<td style="font:normal 1em/1em; color:gray; text-align:left;">TIS-2011-2(00)</td>
+								<td style="font:normal 1em/1em; color:gray;">Copyright 2022 MedITEM</td>
+								<!-- <td id="pageNum" style="font:normal 1em/1em; text-align:right; color:gray;">페이지(1)/(총40)</td> -->
+							</tr>
+						</table>
+					</div>
+				</div>
+				<hr>
+
+				<!-- 목적 및 절차 -->
+				<div class="page" id="report_purpose">
+					<h2>2.&nbsp시험목적 및 절차</h2>
+					<br><br>
+					<h3>2.1&nbsp시험 목적</h3>
+					<br>
+					디지털 트윈 표준 프레임워크 시리즈 ISO 23247-1, 2, 3, 4 를 기반으로 메디컬트윈 KPI(핵심성과지표) 테스트를
+					제공하는 메디템연구소의 객관적인 시험을 통해 시험 대상 제품이 메디컬 트윈의 안전성 및 IRB 규칙 요구사항에 대한
+					가이드라인을 제공하고, 메디컬 트윈의 품질을 개선함으로써 제품의 신뢰도 향상 및 경쟁력을 제고하는데 있다.
+
+					<br><br><br>
+					<h3>2.2&nbsp시험 절차</h3>
+					<br><br>
+					<img src="../img/img_testprocess.png" alt="시험절차" style="width:90%;">
+				</div>
+
+				<!-- 품질속성 -->
+				<div class="page" id="report_item">
+					<h2>3. 시험항목</h2>
+				
+					<p style="padding:10px;">&nbsp;&nbsp;본 시험결과는 ISO-23247(디지털 트윈 표준 프레임워크) 과 IRB(기관생명윤리위원회) 에 근거하여 개발되었으며 
+						다음과 같은 평가 모형을 기준을 작성되었다. 
+					</p>
+					
+					<img src="../img/img_testcase.jpg" alt="시험항목" style="width:400px; height:300px;margin-left: auto; margin-right: auto; display: block;">
+					<br>					
+					
+					<table style="width:100%;">
+						<tr style="height:50px;">
+							<td style="width:10%;"><p>● ISO 23247-1(MT)</p></td>
+							<td style="width:90%"><p>디지털 트윈 개발을 위한 원칙 및 요구사항 정의 관련 항목</p></td>
+						</tr>
+						<tr style="height:50px;">
+							<td><p>● ISO 23247-2(MT)</p></td>
+							<td><p>기능적 뷰를 지원하는 요구사항 정의관련 항목</p></td>
+						</tr>
+						<tr style="height:50px;">
+							<td><p>● ISO 23247-3(MT)</p></td>
+							<td><p>제품, 공정 및 자원 등을 포함하는 요소를 디지털로 표현하기 위한 정보 관련 항목</p></td>
+						</tr>
+						<tr style="height:50px;">
+							<td><p>● ISO 23247-4(MT)</p></td>
+							<td><p>정보 교환을 위한 방법 정의 관련 항목</p></td>
+						</tr>
+						<tr style="height:50px;">
+							<td><p>● IRB</p></td>
+							<td><p>IRB 신청서 요구사항</p></td>
+						</tr>
+						<tr style="height:50px;">
+							<td><p>● 생명 윤리법</p></td>
+							<td><p>인간대상연구 규정사항 관련 항목</p></td>
+						</tr>
+						<tr style="height:50px;">
+							<td><p>● KGCP</p></td>
+							<td><p>의료기기 정보 관련 항목</p></td>
+						</tr>
+						<tr style="height:50px;">
+							<td><p>● 보건의료 데이터 활용 가이드라인</p></td>
+							<td><p>민감정보 중 건강에 관한 정보 및 데이터 심의 위원회 관련 항목</p></td>
+						</tr>
+					</table>
+							
+					<!-- 꼬리말 -->
+					<div>
+						<table border="0" width="100%" height="100%" style="text-align:center; margin-top:20px" frame=void>
+							<tr>
+								<td style="font:normal 1em/1em; color:gray; text-align:left;">TIS-2011-2(00)</td>
+								<td style="font:normal 1em/1em; color:gray;">Copyright 2019 TTA</td>
+								<!-- <td id="pageNum" style="font:normal 1em/1em; text-align:right; color:gray;">페이지(1)/(총40)</td> -->
+							</tr>
+						</table>
+					</div>
+				</div>
+				<hr>
+
+				<div class="page" id="report_result">
+					<h2>4.&nbsp시험결과</h2>
+					<br><br>
+					<h3>4.1&nbsp품질특성별 결함 내역</h3>
+					<br>					
+
+					<!-- <div class="graph_wrap">
+						<div style="width: 600px;">
+							<canvas id="bChart"></canvas>
+							<script>
+								bar()
+							</script>
+						</div>
+		
+						<div style="width: 600px; margin-top: 50px;">
+							<canvas id="myChart"></canvas>
+							<script>
+								bar1()
+							</script>
+						</div>
+					</div> -->
+					
+					<div id="chart_defect" style="width: 500px; height: 500px;"></div>
+					<div id="chart_quality" style="width: 500px; height: 500px;"></div>
+
+					<div id="comment_result"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /#page-content-wrapper -->
+
+		<!-- Bootstrap core JavaScript -->
+		<script src=" ../vendor/jquery/jquery.min.js"> </script>
+		<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script type="text/javascript" src="../js/testcase.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<script language="javascript">
+			temp = location.href.split("?");
+			data = temp[1].split(":");
+			var count_yes = data[0];
+			var count_no = data[1];
+			var count_1 = data[2];
+			var count_2 = data[3];
+			var count_3 = data[4];
+			var count_4 = data[5];
+			var count_5 = data[6];
+			var count_6 = data[7];
+			var count_7 = data[8];
+			var count_8 = data[9];
+			var count_commnet = data[10];
+			var comments = data[11];
+
+			Encoder_comments = decodeURI(comments);
+
+			// var comm_i=temp2[i] 형태
+			temp2 = Encoder_comments.split(",");
+			for (var i = 0; i < count_commnet; i++) {
+				eval("var comm_" + i + "=temp2[" + i + "]");
+				eval("comment_result = comm_" + i + ".split('=')");
+				eval("var num_" + i + "=comment_result[0]");
+				eval("var content_" + i + "=comment_result[1]");
+			}
+
+			var str = "";
+			str += "<table style='width:100%; text-align:center;'>";
+			str += "<th style='width:20%; text-align:center;'>";
+			str += "TC_ID";
+			str += "</th>";
+			str += "<th style='width:80%; text-align:center;'>";
+			str += "Comment";
+			str += "</th>";
+
+			for (var i = 0; i < count_commnet; i++) {
+				str += "<tr>";
+				str += "<td>";
+				str += eval("num_" + i);
+				str += "</td>";
+				str += "<td>";
+				str += eval("content_" + i);
+				str += "</td>";
+				str += "</tr>";
+			}
+
+			str += "</table>";
+			document.getElementById("comment_result").innerHTML = str;
+		</script>
+
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">			
+			google.charts.load('current', {
+				'packages': ['corechart']
+			});
+			google.charts.setOnLoadCallback(drawVisualization);
+
+			function drawVisualization() {
+				var data = google.visualization.arrayToDataTable([
+					['응답', '응답 수'],
+					['YES', Number(isYes)],
+					['NO', Number(isNo)],
+
+				]);
+				var options = {
+					responsive: true,
+					title: '문항별 응답 수',
+					vAxis: {
+						title: '응답 수'
+					},
+					seriesType: 'bars',
+					series: {
+						5: {
+							type: 'line'
+						},
+						yAxis: [{
+							ticks: {
+								min: 0,
+								max: 100,
+							}
+						}]
+					}
+				};
+
+				var chart = new google.visualization.ComboChart(document.getElementById('chart_defect'));
+				chart.draw(data, options);
+			}
+		</script>
+
+		<script type="text/javascript">
+			google.charts.load('current', {
+				'packages': ['corechart']
+			});
+			google.charts.setOnLoadCallback(drawVisualization);
+
+			function drawVisualization() {
+				var data = google.visualization.arrayToDataTable([
+					['품질특성', '응답 수'],
+					['ISO 23247-1(MT)', Number(iso_1)],
+					['ISO 23247-2(MT)', Number(iso_2)],
+					['ISO 23247-3(MT)', Number(iso_3)],
+					['ISO 23247-4(MT)', Number(iso_4)],
+					['IRB', Number(irb)],
+					['생명윤리법', Number(rule)],
+					['KGCP', Number(kgcp)],
+					['보건의료 데이터 활용 가이드라인', Number(data_guide)]
+				]);
+				var options = {
+					title: '항목별 응답수',
+					vAxis: {
+						title: '응답 수'
+					},
+					seriesType: 'bars',
+					series: {
+						5: {
+							type: 'line'
+						}
+					}
+				};
+
+				var chart = new google.visualization.ComboChart(document.getElementById('chart_quality'));
+				chart.draw(data, options);
+			}
+		</script>
+
+		<script type="text/javascript">
+			var temp;
+
+			function save() {
+				document.getElementById("title").value = "test";
+			}
+			function resultPrint() {
+				var initBody = document.body.innerHTML;
+
+				window.onbeforeprint = function () {
+					document.body.innerHTML = document.getElementById("report1").innerHTML;
+				}
+				window.onafterprint = function () {
+					document.body.innerHTML = initBody;
+				}
+				window.print();
+			}
+		</script>
+</body>
+
+</html>

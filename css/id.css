@@ -62,6 +62,7 @@ table input, textarea {
 textarea {
   width: 800px;
   resize: none;
+  word-break: keep-all;
 }
 
 section .nextpage {

@@ -32,7 +32,7 @@ section .menu {
   margin: 0 auto;
   text-align: center;
 }
-section .menu a {
+section .menu div {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -45,11 +45,11 @@ section .menu a {
   border-bottom: 3px solid #555555;
   text-align: center;
 }
-section .menu a:hover {
+section .menu div:hover {
   color: #fff;
   transition: 0.1s;
 }
-section .menu a::before {
+section .menu div::before {
   position: absolute;
   background: rgb(54, 188, 155);
   content: "";
@@ -60,10 +60,10 @@ section .menu a::before {
   z-index: -1;
   transition: top 0.1s ease-in;
 }
-section .menu a:hover::before {
+section .menu div:hover::before {
   top: 0;
 }
-section .menu a:nth-child(n+2):nth-child(-n+3) {
+section .menu div:nth-child(n+2):nth-child(-n+3) {
   margin-left: 30px;
 }
 section .target {
@@ -136,6 +136,7 @@ section .ci_wrap .meditem_des {
   cursor: pointer;
   padding: 3px;
   font-weight: bold;
+  color: rgb(48, 149, 189);
 }
 .down_png {
   margin-left: 15px;
@@ -170,7 +171,7 @@ section .ci_wrap .meditem_des {
   box-sizing: border-box;
 }
 .img_k4s_design {
-  background: url("../img/F4S_logo.png") 0 0 no-repeat;
+  background: url("../img/K4S_logo.png") 0 0 no-repeat;
   background-size: 200px;
   background-position-x: 35px;
   background-position-y: center;
@@ -181,7 +182,7 @@ section .ci_wrap .meditem_des {
   margin-top: 30px;
 }
 .img_k4s_word {
-  background: url("../img/F4S_v2_logo.png") 0 0 no-repeat;
+  background: url("../img/K4S_v2_logo.png") 0 0 no-repeat;
   background-size: 180px;
   background-position-x: 46px;
   background-position-y: center;

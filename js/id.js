@@ -48,6 +48,7 @@ const project_status = document.querySelector('#project_status');
 const bigtype = document.querySelector('#big_type');
 const smalltype = document.querySelector('#small_type');
 const product_summary = document.querySelector("#product_summary");
+
 const btn = document.querySelector("#btn_test");
 const var_input = document.querySelectorAll('input');
 console.log(var_input.length);
@@ -58,6 +59,11 @@ const arr_id = [
   "제품명(한글)", "제품 버전", "제품명(영문)", "제조사/제조국", "개요 및 특성"
 ];
 
+const testing = [
+  "메디템", "20615045", "MedITem", "2022.08.12", "오기영", "www.meditem.co.kr", "meditem@konyang.ac.kr", "010-0000-0000", "041-733-2070",
+  "대전광역시 서구 관저동로 158, 죽헌정보관 801", "한상현", "010-0000-0000", "tiger00831@naver.com", "PL",
+  "메디템", "v0.9.0", "MedITEM", "한국"
+]
 ko_busi.addEventListener('input', (e) => {
   localStorage.setItem("ko_busi", e.target.value);
 });
@@ -125,7 +131,13 @@ product_summary.addEventListener('input', (e) => {
   localStorage.setItem("product_summary", e.target.value);
 });
 
-
+function testing1() {
+  for(var i = 0; i < var_input.length - 1; i++) {
+    var_input[i].value = testing[i];
+  }
+  product_summary.innerText = "이 제품은 ISO 23247 표준을 토대로 제작한 핵심성과지표(KPI)를 토대로 메디컬 트윈 개발 과정에 있어 안전성을 검사하고 평한다. 개발 중인 메디컬 트윈 소프트웨어가 국제 표준에 적합하여 상용화가 가능한지 검사하고 보고서를 제작해주는 것을 본 목적으로 한다.";
+  project_status.value = "개발 진행 중";
+}
 function checkBlank() {
   const big_value = ["개인맞춤의학", "의료조직개선", "의약품, 의료기기개발"]
   const test_url = ["testpersonal.html", "testimprove.html", "testdevelop.html"]
@@ -160,3 +172,9 @@ function checkBlank() {
     }
   }
 }
+
+let today = new Date();
+let year = today.getFullYear();
+let month = today.getMonth() + 1;
+let date = today.getDate();
+localStorage.setItem('testDate', year + '.' + month + '.' + date);
