@@ -51,10 +51,12 @@ function searchData() {
   const busi_name1 = document.querySelector('.busi_name2');
   const represntative = document.querySelector('.representative');
   const testDate1 = document.querySelector('.testDate');
+  const resultstatus = document.querySelector('.none');
 
   if(sch_txt.value === "메디템") {
     busi_name1.innerText = ko_busi;
     represntative.innerText = busi_represent;
     testDate1.innerText = testDate;
+    resultstatus.className = 'btn_style1';
   }
 }
