@@ -1,9 +1,6 @@
 body {
-
-margin: 0;
-
-padding: 0;
-
+	margin: 0;
+	padding: 0;
 }
 
 #title {
@@ -44,11 +41,11 @@ padding: 0;
 }
 
 .jb-bold {
-     font-weight: bold;
+	font-weight: bold;
 }
 
 .jb-bigsize {
-    font-size: 30px;
+	font-size: 30px;
 }
 
 * {
@@ -80,17 +77,17 @@ padding: 0;
 
 @media print {
 	html, body {
-	width: 210mm;
-	height: 297mm;
+		width: 210mm;
+		height: 297mm;
 	}
 
 	.page {
-	margin: 0;
-	border: initial;
-	width: initial;
-	min-height: initial;
-	box-shadow: initial;
-	background: initial;
-	page-break-after: always;
+		margin: 0;
+		border: initial;
+		width: initial;
+		min-height: initial;
+		box-shadow: initial;
+		background: initial;
+		page-break-after: always;
 	}
 }

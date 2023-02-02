@@ -66,8 +66,32 @@ function aaa()   {
   document.querySelector('.product_status').innerText = project_status;
   document.querySelector('.big_type').innerText = big_type;
   document.querySelector('.small_type').innerText = small_type;
+}  
+
+function save() {
+  document.getElementById("title").value = "test";
 }
-  
+function resultPrint() {
+  var initBody = document.body.innerHTML;
+
+  window.onbeforeprint = function () {
+    document.body.innerHTML = document.getElementById("report").innerHTML;
+  }
+  window.onafterprint = function () {
+    document.body.innerHTML = initBody;
+  }
+  window.print();
+}
+
+// const today = new Date();
+// const year = today.getFullYear();
+// const month = today.getMonth() + 1;
+// const date = today.getDate();
+// const now_date = document.querySelector('#cover_date');
+// const now_date2 = document.querySelector('#cover_date2');
+// now_date.innerText = year + "년 " + month + "월 " + date + "일";
+// now_date2.innerText = year + "년 " + month + "월 " + date + "일";
+
 const isYes = localStorage.getItem('isYes');
 const isNo = localStorage.getItem('isNo');
 const iso_1 = localStorage.getItem('iso_1');
@@ -89,7 +113,7 @@ function bar(){
         label: '애앵', //그래프 이름
         data: [Number(isYes), Number(isNo)], //막대값
         backgroundColor: [ //도형 색상
-          'rgba(0, 76, 152, 0.2)',
+        'rgba(0, 76, 152, 0.2)',
           'rgba(207, 207, 207, 0.5)'
         ],
         borderColor: [ //도형 테두리 색상

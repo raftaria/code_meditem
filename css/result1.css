@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+.pdd-10 {
+  padding-left: 10px;
+}
+.mg-20 {
+  margin-top: 20px;
+}
+.mgl-20 {
+  margin-left: 20px;
+}
+.mgl-30 {
+  margin-left: 30px;
+  font-weight: bold;
+}
+.mgl-50 {
+  margin-left: 50px;
+}
+.mgl-100 {
+  margin-left: 100px;
+}
+.mgl-130 {
+  margin-left: 130px;
+}
+.mgl-140 {
+  margin-left: 140px;
+}
+.mgl-150 {
+  margin-left: 150px;
+}
+.mgl-200 {
+  margin-left: 200px;
+}
+.mgt-10 {
+  margin-top: 10px;
+}
+.mgt-15 {
+  margin-top: 15px;
+}
+.mgt-20 {
+  margin-top: 20px;
+}
+.mgt-30 {
+  margin-top: 30px;
+}
+.mgt-25 {
+  margin-top: 25px;
+}
+.mgt-50 {
+  margin-top: 50px;
+}
+.wdt-10 {
+  width: 10%;
+}
+.wdt-30 {
+  width: 30%;
+  min-width: 250px;
+}
+.wdt-150px {
+  width: 150px;
+}
+.wdt-200px {
+  width: 200px;
+}
+.mwdt-100 {
+  min-width: 100px;
+  text-align: center;
+}
+.mwdt-150 {
+  min-width: 150px;
+}
+.fts-13 {
+  font-size: 13pt;
+}
+.fts-17 {
+  font-size: 17pt;
+}
+.fts-20 {
+  font-size: 20px;
+}
+.fts-25 {
+  font-size: 25px;
+}
+.fts-40 {
+  font-size: 40px;
+}
+.hgt-50 {
+  height: 50px;
+}
+.hgt-800 {
+  height: 500px;
+}
+hr {
+  margin: 30px 0;
+}
+
+section {
+  background-color: rgb(199, 199, 199);
+  position: relative;
+}
+section h1 {
+  padding: 50px;
+}
+#btn_prt {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  position: absolute;
+  top: 46px;
+  right: 50px;
+  cursor: pointer;
+}
+.page_wrap {
+  background-color: gray;
+  padding: 30px 50px;
+}
+.page {
+  margin: 30px auto;
+  padding: 50px;
+  background-color: white;
+  width: 210mm;
+  height: 297mm;
+  min-width: 1050px;
+}
+.lab-tit {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.test_num {
+  font-size: 20px;
+}
+.id_logo {
+  width: 200px;
+  margin-left: 75px;
+  margin-top: 3px;
+  padding: 10px 0;
+}
+.id_table {
+  border: 2.6px solid #000;
+  border-collapse: collapse;
+  width: 80%;
+  height: 700px;
+  margin: 0 auto;
+}
+.id_table th {
+  font-size: 35px;
+  height: 70px;
+}
+.id_table td, .id_table tr {
+  border: 1px solid #000;
+}
+.test_date {
+  text-align: center;
+  padding-right: 12px;
+  margin-top: 25px;
+  font-size: 14px;
+}
+.test_date2 {
+  padding-right: 12px;
+  font-size: 14px;
+}
+.hanko {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 시험결과서 */
+.k4sv2_logo {
+  width: 400px;
+  margin: 400px auto 0 auto;
+}
+.sign_wrap {
+  width: 500px;
+  margin: 100px auto;
+  text-align: center;
+}
+.sign_wrap p:nth-child(3) {
+  margin-top: 60px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.sign_wrap p:nth-child(4) {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@page {
+	size: A4;
+	margin: 0;
+}
+
+@media print {
+	html, body {
+		width: 210mm;
+		height: 297mm;
+	}
+
+	.page {
+		margin: 0;
+		border: initial;
+		width: initial;
+		min-height: initial;
+		box-shadow: initial;
+		background: initial;
+		page-break-after: always;
+	}
+}
